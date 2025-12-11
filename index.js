@@ -70,6 +70,7 @@ class LeadForm extends HTMLElement {
         input, textarea {
           width: 100%; padding: 10px; border: 1px solid #ccc;
           border-radius: 4px; margin-bottom: 10px;
+          box-sizing: border-box;
         }
         button {
           background: #007bff; color: white; border: none;
@@ -140,7 +141,7 @@ customElements.define("lead-form", LeadForm);
   const wrapper = document.getElementById("form-wrapper");
   if (wrapper) {
     wrapper.innerHTML = `
-      <lead-form 
+      <lead-form
         lang="${lang || "en"}"
         success-url="${successUrl || "/"}"
         error-url="${errorUrl || "/error"}"
